@@ -1,0 +1,32 @@
+{% extends "sohh.html" %}
+{% block body %}
+
+
+<div class="container">
+<form method="post" action="/contact">
+{% csrf_token %}
+<div class="mb-3">
+  <label for="product_name" class="form-label">product_name</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" name="product_name">
+</div>
+<div class="mb-3">
+  <label for="category" class="form-label">category</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name = "category">
+</div>
+<div class="mb-3">
+  <label for="subcategory" class="form-label">subcategory</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name= "subcategory">
+</div>
+<div class="mb-3">
+  <label for="desc" class="form-label">desc</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name = "desc">
+</div>
+<div class="mb-3">
+  <label for="price" class="form-label">price</label>
+  <input type="int" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder"name ="price">
+</div>
+ <button  class="btn btn-primary">submit</button>
+
+</form>
+</div>
+ {% endblock body  %}
